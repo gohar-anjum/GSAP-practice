@@ -1,9 +1,5 @@
-gsap.fromTo ("#container", {
-    x : 100,
+gsap.from("#container", {
+    x : 700,
     duration : 2,
     ease: Expo.easeInOut
-},{
-    y : 500,
-    duration : 2,
-    backgroundColor: "black"
 })
