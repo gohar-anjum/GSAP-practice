@@ -1,14 +1,20 @@
-gsap.to(".container:nth-child(1)", {
-  x:500,
-  duration:2,
-  delay:1,
-  repeat:-1,
-  yoyo:true
-})
-gsap.from(".container:nth-child(2)", {
-    x:500,
-    duration:2,
+gsap.from(".page1 .container",{
+    opacity:0,
     delay:1,
-    repeat:-1,
-    yoyo:true
-  })
+    scale:1.5,
+    duration:2
+})
+gsap.from(".page2 .container",{
+    opacity:0,
+    delay:1,
+    rotate:750,
+    scale:1.5,
+    duration:2,
+    scrollTrigger:{
+        trigger:".page2 .container",
+        scroller:"body",
+        marker:true,
+        start:"top 60%",
+        scrub:2
+    }
+})
